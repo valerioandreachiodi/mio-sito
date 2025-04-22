@@ -1,0 +1,201 @@
+    /* ==========================================
+       Sezione Alto - Titoli
+    ========================================== */
+    .donazioni_alto {
+      width: 100%;
+      background-color: var(--grigio-chiaro);
+      padding: 20px;
+    }
+
+    .donazioni_alto h1 {
+      text-align: left;
+      padding-left: 2%;
+      color: var(--blu-enpa);
+      font-size: 40px;
+    }
+
+    .donazioni_alto h2 {
+      text-align: left;
+      padding-left: 2%;
+      color: var(--arancio-hover);
+      font-size: 30px;
+    }
+
+    /* ==========================================
+       Sezioni PayPal e Beni - Layout Flex
+    ========================================== */
+    .donazioni_paypal,
+    .donazioni_beni {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .donazioni_paypal_left,
+    .donazioni_paypal_right,
+    .donazioni_beni_left,
+    .donazioni_beni_right {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px;
+    }
+
+    /* Testi nelle sezioni a sinistra */
+    .donazioni_paypal_left h2,
+    .donazioni_beni_left h2 {
+      color: var(--blu-enpa);
+      font-size: 30px;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .donazioni_paypal_left p,
+    .donazioni_beni_left p {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* ==========================================
+       Bottoni
+    ========================================== */
+    .donazioni_btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--blu-enpa);
+      color: var(--bianco);
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .donazioni_btn:hover {
+      background-color: var(--verde-scuro);
+      border: solid 1px var(--blu-enpa);
+    }
+
+    /* ==========================================
+       Sezione Donazioni Loghi
+    ========================================== */
+    .donazioni_loghi {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #333;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      min-height: 50vh;
+    }
+
+    .donazioni_logo {
+      flex: 1 1 calc(20% - 40px);
+      max-width: 15%;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .donazioni_logo img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    /* ==========================================
+       Sezione Donazioni Dirette
+    ========================================== */
+    .donazioni_dirette {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .donazioni_dirette_left,
+    .donazioni_dirette_right {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px;
+    }
+
+    .donazioni_dirette_right h2 {
+      color: var(--blu-enpa);
+      font-size: 30px;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .donazioni_dirette_right p {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* ==========================================
+       Sezione Wishlist
+    ========================================== */
+    .donazioni_wishlist {
+      background-color: var(--arancio-hover);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .donazioni_wishlist h1 {
+      color: var(--blu-notte);
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    .donazioni_wishlist h3 {
+       color: var(--blu-notte);
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    /* ==========================================
+       Spazio tra le sezioni
+    ========================================== */
+    .spazio {
+      margin: 20px 0;
+    }
+
+    /* ==========================================
+       Media Query per dispositivi fino a 767px
+    ========================================== */
+    @media (max-width: 767px) {
+      /* In modalità mobile impila le colonne */
+      .donazioni_paypal,
+      .donazioni_beni,
+      .donazioni_dirette {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      /* Centra i titoli nella sezione alto */
+      .donazioni_alto h1,
+      .donazioni_alto h2 {
+        text-align: center;
+        padding-left: 0;
+      }
+
+      /* Riduce i padding per una migliore visualizzazione */
+      .donazioni_paypal_left,
+      .donazioni_paypal_right,
+      .donazioni_beni_left,
+      .donazioni_beni_right,
+      .donazioni_dirette_left,
+      .donazioni_dirette_right {
+        padding: 10px;
+      }
+
+      /* Adatta le dimensioni dei loghi */
+      .donazioni_logo {
+        max-width: 40%;
+        flex: 1 1 40%;
+      }
+    }
