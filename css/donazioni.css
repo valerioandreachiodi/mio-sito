@@ -73,9 +73,29 @@
     }
 
     .donazioni_btn:hover {
-      background-color: var(--verde-scuro);
+      background-color: var(--arancio-hover);
       border: solid 1px var(--blu-enpa);
     }
+    /* ==========================================
+       Bottoni
+    ========================================== */
+    .wishlist_btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--blu-enpa);
+      color: var(--grigio-chiaro);
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .wishlist_btn:hover {
+      background-color: var(--grigio-chiaro);
+      border: solid 1px var(--blu-enpa);
+      color: var(--blu-enpa);
+    }
+
 
     /* ==========================================
        Sezione Donazioni Loghi
