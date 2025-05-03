@@ -1,0 +1,72 @@
+.gattile_alto {
+    width: 100%;
+    height: 20vh;
+                background-color: var(--grigio-chiaro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+}
+
+.gattile_alto h1 {
+    color: var(--arancio-hover);
+    font-size: 40px;
+}
+
+.gattile_alto h2 {
+            color: var(--blu-enpa);
+    font-size: 30px;
+}
+
+.gattile_box, .gattile_box2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 2%;
+}
+
+.gattile_left, .gattile_right,
+.gattile_left2, .gattile_right2 {
+    width: 45%;
+    padding: 2%;
+}
+
+.gattile_right h2, .gattile_left2 h2 {
+    text-align: center;
+    color: var(--blu-enpa);
+    font-size: 30px;
+}
+
+.gattile_right p, .gattile_left2 p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.gattile_left img, .gattile_right2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Effetto parallasse */
+.gattile_centrale {
+    width: 100%;
+    height: 40vh;
+    background-image: url("../img/pexels-pixabay-45170.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 767px) {
+    .gattile_box, .gattile_box2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gattile_left, .gattile_right,
+    .gattile_left2, .gattile_right2 {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,277 @@
+        /* ======================================================================================= */
+ 		/* ===                                INFO RIFUGIO                                     === */
+        /* ======================================================================================= */
+        /* Contenitore principale */
+        .corpo {
+            width: 80%;
+            margin: auto;
+            padding: 40px;
+        }
+
+        /* Testo introduttivo */
+        .corpo h3 {
+            font-size: 22px;
+            color: #153A5B;
+        }
+
+        /* Galleria di card */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Stile Polaroid */
+        .figure {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+						border: solid 1px #333;
+        }
+
+        .figure::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            filter: blur(2px);
+        }
+
+        /* Dimensioni uniformi delle immagini */
+        .figure img {
+            width: 100%;
+            height: 350px; /* Altezza fissa per tutte le immagini */
+            object-fit: cover; /* Mantiene il rapporto senza deformare */
+            border-radius: 5px;
+						border: solid 1px #333;
+        }
+
+        /* Testo sotto l'immagine */
+        .figure figcaption {
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #153A5B;
+        }
+
+        .button {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #2EA0D3;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background: #FF8C42;
+        }
+
+        /* ======================================================================================= */
+ 		/* ===                              FINE INFO RIFUGIO                                  === */
+        /* ======================================================================================= */
+ 	
+
+        /* ======================================================================================= */
+        /* ===                                    ABOUT                                        === */
+        /* ======================================================================================= */
+
+				       .services {
+            background-color: whitesmoke;
+            padding: 40px 20px;
+        }
+
+        .services h1 {
+            text-align: center;
+            color: var(--blu-enpa);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            width: 40%;
+            background-color: var(--bianco);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: var(--blu-notte);
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 0.1;
+        }
+
+        .card-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--blu-enpa);
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 16px;
+            color: var(--bianco);
+            font-weight: bold;
+        }
+
+        .card-content .btn:hover {
+            background-color: var(--arancio-hover);
+        }
+
+        /* ======================================================================================= */
+        /* ===                                  FINE ABOUT                                     === */
+        /* ======================================================================================= */
+
+        /* ======================================================================================= */
+        /* ===                                   PENSIONI                                      === */
+        /* ======================================================================================= */
+
+        
+        .pensioni {
+            width: 100%;
+            height: 20vh;
+						background-color: var(--grigio-chiaro);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 2%;
+        }
+
+        .pensioni h1 {
+            color: var(--arancio-hover);
+            font-size: 40px;
+        }
+
+        .pensioni h2 {
+					color: var(--blu-enpa);
+            font-size: 30px;
+        }
+
+        .pensioni_box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40px 2%;
+        }
+
+        .pensioni_left, .pensioni_right {
+            width: 45%;
+            padding: 2%;
+        }
+
+        .pensioni_right h2 {
+            text-align: center;
+            color: var(--blu-enpa);
+            font-size: 30px;
+        }
+
+        .pensioni_right p {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .pensioni_left img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+
+        /* ======================================================================================= */
+        /* ===                                FINE PENSIONI                                    === */
+        /* ======================================================================================= */
+
+        @media screen and (max-width: 767px) {
+
+        /* ======================================================================================= */
+        /* ===                                INFO RIFUGIO                                     === */
+        /* ======================================================================================= */
+        /* Contenitore principale */
+        .corpo {
+            width: 95%;
+            margin: auto;
+            padding: 40px;
+        }
+        .gallery {
+                grid-template-columns: 1fr;
+            }
+
+        /* ======================================================================================= */
+        /* ===                                  SERVIZI                                        === */
+        /* ======================================================================================= */
+
+        .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+
+            .card-content h3 {
+                font-size: 20px;
+            }
+
+            .card-content p {
+                font-size: 14px;
+            }
+        /* ======================================================================================= */
+        /* ===                                 FINE SERVIZI                                    === */
+        /* ======================================================================================= */
+
+        /* ======================================================================================= */
+        /* ===                                 PENSIONI                                        === */
+        /* ======================================================================================= */
+        .pensioni_box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pensioni_left, .pensioni_right {
+                width: 90%;
+            }
+        /* ======================================================================================= */
+        /* ===                                 FINE PENSIONI                                   === */
+        /* ======================================================================================= */
+
+        }

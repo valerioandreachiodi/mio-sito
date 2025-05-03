@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E.N.P.A. Cascina Quadrifoglio</title>
-    <link rel="stylesheet" href="css/campione.css">
-    <link rel="stylesheet" href="css/adozioni.css">
-
+        <link rel="stylesheet" href="css/campione.css">
 </head>
 <body>
     <!-- ======================================================================================= -->
@@ -29,8 +27,8 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#ilrifugio">Rifugio</a></li>
-            <li><a href="index.html#services">Come aiutare</a></li>
+            <li><a href="#ilrifugio">Rifugio</a></li>
+            <li><a href="#services">Come aiutare</a></li>
             <li><a href="donazioni.html">DONA ORA</a></li>
             <li><a href="#contatti">Contatti</a></li>
         </ul>
@@ -43,64 +41,19 @@
     <!-- ===                                  FINE NAVBAR                                    === -->
     <!-- ======================================================================================= -->
 
+    <!-- ======================================================================================= -->
+    <!-- ===                                  PULSANTE TOP                                   === -->
+    <!-- ======================================================================================= -->
     <!-- Pulsante "Top" -->
     <button class="top-button" onclick="scrollToTop()">
         <img src="img/top-icon.png" alt="Torna su">
     </button>
 
     <!-- ======================================================================================= -->
-
+    <!-- ===                                 FINE PULSANTE TOP                               === -->
     <!-- ======================================================================================= -->
-<div class="adozioni_alto">
-        <h1>ADOTTA UN AMICO QUATTROZAMPE</h1>
-        <h2>Adozione in E.N.P.A. - Aggiungi un membro alla tua famiglia !</h2>
-    </div>
-
-    <div class="adozioni_box">
-        <div class="adozioni_left">
-            <img src="img/1.jpg" alt="Volontario">
-        </div>
-        <div class="adozioni_right">
-            <h2>Il Nostro rifugio</h2>
-            <p>
-            	<br><br>
-             	Ogni animale ha una storia, spesso segnata da abbandono o difficoltà, ma anche da una speranza di trovare una famiglia amorevole. 
-						 	<br><br>
-							Adottare non è solo dare una casa a un amico a quattro zampe, è cambiare una vita, creare un legame speciale e ricevere affetto incondizionato. 
-						 	<br><br>
-							Nei rifugi, tanti cuccioli e adulti aspettano solo te: il loro futuro dipende da una scelta. Apri il tuo cuore, regala una seconda possibilità. 
-							<br><br>
-							Adotta, perché l’amore vero ha quattro zampe! 🐾💙 
-							<br><br>
-							<span style="color: red"> COMPILA IL FORM IN BASSO, MANDACI UN MESSAGGIO  </span><br> <span style="color: #153A5B"> SOLO SU APPUNTAMENTO </span>
 
 
-            </p>
-        </div>
-    </div>
-
-    <div class="adozioni_centrale"></div>
-
-<div class="adozioni_box2">
-        <div class="adozioni_left2">
-            <h2>Tu sei importante, FAI LA DIFFERENZA</h2>
-          	<p>
-              <br><br> 
- 							Adottare un animale è una scelta che cambia la vita, un impegno che va oltre l’entusiasmo iniziale.
-              <br><br> 
-							Non è un gioco, ma una promessa di amore e cura, ogni giorno.
-              <br><br> 
-							Un amico a quattro zampe ha bisogno di attenzione, pazienza e affetto, ma in cambio regala gioia pura, lealtà senza condizioni e momenti indimenticabili. 
-              <br><br> 
-							Guarderai negli occhi un essere che dipende da te e sentirai un legame profondo. 
-							<br><br> 
-							Se scegli di adottare, scegli di dare una casa, una seconda possibilità e un amore che dura per sempre. 🐾❤️
-            </p>
-        </div>
-        <div class="adozioni_right2">
-            <img src="img/pexels-robert-bogdan-156165-663573.jpg" alt="adozioni">
-        </div>
-    </div>
     <!-- ======================================================================================= -->
     <!-- ===                                     FORM                                        === -->
     <!-- ======================================================================================= -->
@@ -111,8 +64,16 @@
         <div class="contact-form">
             <h2>CONTATTACI</h2>
             <p>Compila il form e saremo lieti di risponderti il prima possibile.</p>
+            <!--
+              questo form é limitato a 250 mail al mese
+              https://web3forms.com/#start
+            -->
             <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+            <!-- Replace with your Access Key -->
                 <input type="hidden" name="access_key" value="62db2e30-e3d1-49f3-b147-6711e00fb763">
+            <!-- Optional: Subject an be prefilled using type="hidden"
+                or type="text" for normal user submitted input -->
                 <input type="hidden" name="subject" value="Messaggio inviato dal sito di ENPA Quadrifoglio">
                 <input type="hidden" name="from_name" value="Enpa Cascina Quadrifoglio">
                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
@@ -146,9 +107,9 @@
             <div class="footer-left">
 							<a href="index.html">Home</a>
 							<a href="index.html#ilrifugio">Rifugio</a>
-                            <a href="index.html#services\">Come Aiutare</a>
+                            <a href="index.html#services">Come Aiutare</a>
                             <a href="donazioni.html">DONA ORA</a>
-                            <a href="#contatti">Contatti</a>
+                            <a href="index.html#contatti">Contatti</a>
             </div>
             <div class="footer-right">
                 <a href="https://maps.google.com/?q=Strada+per+Mirabello,+6,+27010+San+Genesio+ed+Uniti+PV" target="_blank"><img src="img/icons8-location2.gif" alt="Luogo">Strada per Mirabello, 6, 27010 San Genesio ed Uniti PV</a>
@@ -160,7 +121,7 @@
         <div class="footer-bottom">
             <div class="social-icons">
                 <a href="https://www.facebook.com/cascinaquadrifogliorifugio" class="icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
-                <a href="https://www.facebook.com/cascinaquadrifogliorifugio" class="icon instagram"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/enpa_pavia_cascinaquadrifoglio" class="icon instagram"><img src="img/instagram.png" alt="Instagram"></a>
                 <a href="https://www.youtube.com/watch?v=4bkQIQ1iQbk" class="icon youtube"><img src="img/Uiconstock-Flatin-Social-Youtube.256.png" alt="PayPal"></a>
             </div>
 						<p>Un rifugio di speranza, dove ogni coda scodinzola e ogni cuore trova casa. </p>
@@ -170,8 +131,10 @@
     <!-- ======================================================================================= -->
     <!-- ===                                  FINE FOOTER                                    === -->
     <!-- ======================================================================================= -->
+
     <script src="js/menu.js"></script>
     <script src="js/pulsante.js"></script>
+    <script src="js/carosello.js"></script>
 </body>
 </html>
 

@@ -4,542 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E.N.P.A. Cascina Quadrifoglio</title>
-    <style>
-        /* Colori principali */
-        :root {
-            --blu-enpa: #2EA0D3;
-            --bianco: #FFFFFF;
-            --blu-notte: #153A5B;
-            --grigio-chiaro: #EAECEF;
-            --arancio-hover: #FF8C42;
-            --rubino-notte: #C0392B;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Stile generale */
-        body {
-            background-color: var(--grigio-chiaro);
-            color: var(--blu-notte);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-        }
-
-        /* ======================================================================================= */
-        /* ===                                       NAVBAR                                    === */
-        /* ======================================================================================= */
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #153A5B; /* Colore aggiornato */
-            padding: 15px 20px;
-        }
-
-        /* Contenitore Logo + Testo */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* Testo accanto al logo */
-        .logo-text {
-            text-align: left;
-            font-size: 18px;
-            line-height: 1.2;
-            font-weight: bold;
-            color: #EAE0D5; /* Beige caldo per migliorare la leggibilità */
-        }
-
-        .hamburger {
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-            display: none; /* Ora è nascosto quando lo schermo è grande */
-        }
-
-        .hamburger div {
-            width: 30px;
-            height: 4px;
-            background-color: white;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .logo {
-            text-align: right;
-        }
-
-        .logo img {
-            height: 50px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-grow: 1;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            align: center;
-            transition: color 0.3s ease-in-out;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #ffcc00;
-        }
-
-        /* Effetto animato del pulsante */
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background-color: #ffcc00;
-            bottom: -3px;
-            left: 0;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .nav-links a:hover::before {
-            transform: scaleX(1);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-          /*  margin-right: 100px; */ /* Aumentato lo spazio dal fondo della pagina */
-        }
-
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            display: block;
-            background-size: cover;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Personalizzazione delle icone social */
-        .ig {
-            background-image: url('img/instagram.png');
-        }
-
-        .fb {
-            background-image: url('img/facebook.png');
-        }
-
-        .social-icon:hover {
-            transform: scale(1.2);
-        }
-
-        /* Animazione del pulsante hamburger */
-        .hamburger.active div:nth-child(1) {
-            transform: translateY(6px) rotate(45deg);
-        }
-
-        .hamburger.active div:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active div:nth-child(3) {
-            transform: translateY(-6px) rotate(-45deg);
-        }
-
-        /* ======================================================================================= */
-        /* ===                                 FINE NAVBAR                                     === */
-        /* ======================================================================================= */
-
-         /* Pulsante "Top" */
-        .top-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: var(--blu-notte);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        /* Logo nel pulsante */
-        .top-button img {
-            width: 30px;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        /* Effetto hover */
-        .top-button:hover {
-            background-color: var(--arancio-hover);
-            transform: scale(1.1);
-        }
-
-        .top-button:hover img {
-            transform: scale(1.2);
-        }
-
-        /* Quando è visibile */
-        .top-button.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        /* ======================================================================================= */
-        /* ===                                    FORM                                         === */
-        /* ======================================================================================= */
-
-       /* ======================================================================================= */
-        /* ===                                    FORM                                         === */
-        /* ======================================================================================= */
-
- .volontariato_alto {
-            width: 100%;
-            height: 20vh;
-						background-color: var(--grigio-chiaro);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 2%;
-        }
-
-        .volontariato_alto h1 {
-            color: var(--arancio-hover);
-            font-size: 40px;
-        }
-
-        .volontariato_alto h2 {
-					color: var(--blu-enpa);
-            font-size: 30px;
-        }
-
-        .volontariato_box, .volontariato_box2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 40px 2%;
-        }
-
-        .volontariato_left, .volontariato_right,
-        .volontariato_left2, .volontariato_right2 {
-            width: 45%;
-            padding: 2%;
-        }
-
-        .volontariato_right h2, .volontariato_left2 h2 {
-            text-align: center;
-            color: var(--blu-enpa);
-            font-size: 30px;
-        }
-
-        .volontariato_right p, .volontariato_left2 p {
-            text-align: left;
-            font-size: 20px;
-        }
-
-        .volontariato_left img, .volontariato_right2 img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Effetto parallasse */
-        .volontariato_centrale {
-            width: 100%;
-            height: 40vh;
-            background-image: url("img/pexels-pixabay-45170.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-       /* ======================================================================================= */
-        /* ===                                    FORM                                         === */
-        /* ======================================================================================= */
-
-        /* ======================================================================================= */
-        /* ===                                    FORM                                         === */
-        /* ======================================================================================= */
-                /* Contenitore principale */
-        .form-container {
-            display: flex;
-            width: 80%;
-            margin: auto;
-            background-color: var(--blu-notte);
-            color: var(--bianco);
-            border-radius: 10px;
-            padding: 20px;
-            gap: 30px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 40px; /* Aggiunto spazio sotto */
-        }
-
-        /* Sezione form */
-        .contact-form {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-form h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .contact-form p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .contact-form textarea {
-            height: 120px;
-            resize: none;
-        }
-
-        .send-button {
-            background-color: var(--arancio-hover);
-            color: var(--bianco);
-            padding: 12px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .send-button:hover {
-            background-color: #D66D32;
-        }
-
-        /* Sezione mappa */
-        .map {
-            width: 50%;
-        }
-
-        .map iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            border: none;
-        }
-        /* ======================================================================================= */
-        /* ===                                    FINE FORM                                    === */
-        /* ======================================================================================= */
-
-        /* ======================================================================================= */
-        /* ===                                    FOOTER                                       === */
-        /* ======================================================================================= */
-                   /* Footer */
-        footer {
-            width: 100%;
-            background-color: var(--blu-notte);
-            color: var(--bianco);
-            padding: 20px;
-            font-size: 18px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Container unico per la sezione con link */
-        .footer-content {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-left, .footer-right {
-            width: 50%;
-            padding: 10px;
-        }
-
-        /* Link a sinistra */
-        .footer-left a {
-            display: block;
-            text-decoration: none;
-            color: var(--bianco);
-            font-size: 16px;
-            margin: 5px 0;
-            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        .footer-left a:hover {
-            color: var(--arancio-hover);
-            transform: scale(1.1);
-        }
-
-        /* Link con icona a destra */
-        .footer-right a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--bianco);
-            font-size: 16px;
-            margin: 5px 0;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .footer-right img {
-            width: 25px;
-            margin-right: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .footer-right a:hover img {
-            transform: scale(1.2);
-        }
-
-        /* Icone social in basso (100% width) */
-        .footer-bottom {
-            width: 100%;
-            text-align: center;
-            padding: 0; /* Rimosso padding per evitare bianco in basso */
-            margin-top: 10px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .icon img {
-            width: 40px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .icon:hover img {
-            transform: translateY(-10px) scale(1.1);
-        }
-        /* ======================================================================================= */
-        /* ===                                  FINE FOOTER                                    === */
-        /* ======================================================================================= */
-
-        /* Responsività con menu hamburger */
-        @media screen and (max-width: 767px) {
-        /* ======================================================================================= */
-        /* ===                                       NAVBAR                                    === */
-        /* ======================================================================================= */
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hamburger {
-                display: flex; /* Adesso appare quando è piccolo */
-                position: absolute;
-                right: 20px;
-                top: 15px;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .logo {
-                order: -1; /* Metto il logo sopra */
-                text-align: center;
-                margin-bottom: 10px;
-            }
-
-            .logo img {
-                height: 60px;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                margin: 15px 0;
-                display: none;
-            }
-
-            .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 38px;
-            align: center;
-            transition: color 0.3s ease-in-out;
-            position: relative;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .social-icons {
-                margin-top: 20px;
-                display: flex;
-                justify-content: center;
-            }
-        /* ======================================================================================= */
-        /* ===                                 FINE NAVBAR                                     === */
-        /* ======================================================================================= */
-
-        .volontariato_box, .volontariato_box2 {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .volontariato_left, .volontariato_right,
-            .volontariato_left2, .volontariato_right2 {
-                width: 90%;
-            }
-
-        /* ======================================================================================= */
-        /* ===                                    FORM                                         === */
-        /* ======================================================================================= */
-            .form-container {
-                flex-direction: column;
-                width: 90%;
-            }
-
-            .contact-form,
-            .map {
-                width: 100%;
-            }
-        /* ======================================================================================= */
-        /* ===                                 FINE FORM                                       === */
-        /* ======================================================================================= */
-
-        }
-    </style>
+    <link rel="stylesheet" href="css/campione.css">
+    <link rel="stylesheet" href="css/gattile.css">
 </head>
 <body>
     <!-- ======================================================================================= -->
@@ -564,6 +30,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#ilrifugio">Rifugio</a></li>
             <li><a href="index.html#services">Come aiutare</a></li>
+            <li><a href="donazioni.html">DONA ORA</a></li>
             <li><a href="#contatti">Contatti</a></li>
         </ul>
         <div class="social-icons">
@@ -583,16 +50,16 @@
     <!-- ======================================================================================= -->
 
     <!-- ======================================================================================= -->
-<div class="volontariato_alto">
+<div class="gattile_alto">
         <h1>GATTILE</h1>
         <h2>Fai parte della famiglia E.N.P.A.</h2>
     </div>
 
-    <div class="volontariato_box">
-        <div class="volontariato_left">
+    <div class="gattile_box">
+        <div class="gattile_left">
             <img src="img/pexels-pixabay-33537.jpg" alt="Volontario">
         </div>
-        <div class="volontariato_right">
+        <div class="gattile_right">
             <h2>Il Nostro rifugio</h2>
             <p>
                 <br><br>
@@ -617,10 +84,10 @@
         </div>
     </div>
 
-    <div class="volontariato_centrale"></div>
+    <div class="gattile_centrale"></div>
 
-    <div class="volontariato_box2">
-        <div class="volontariato_left2">
+    <div class="gattile_box2">
+        <div class="gattile_left2">
             <h2>Tu sei importante, FAI LA DIFFERENZA</h2>
                         <p>
                             <br><br>
@@ -637,14 +104,14 @@
                             <br><br>
 							<span style="color: #006400">Come Puoi Aiutarci:</span>
                             <br><br>
-							- <a href="adozione.html" class="btn"><span style="color: red">Adotta:</span></a> Se stai pensando di aggiungere un nuovo membro alla tua famiglia, vieni a trovarci! Potresti trovare il tuo compagno ideale.
+							- <a href="adozioni.html" class="btn"><span style="color: red">Adotta:</span></a> Se stai pensando di aggiungere un nuovo membro alla tua famiglia, vieni a trovarci! Potresti trovare il tuo compagno ideale.
                             <br><br>
-							- <a href="volontario.html" class="btn"><span style="color: red">Fai Volontariato:</span></a>  Abbiamo sempre bisogno di mani amiche per aiutarci nella cura dei gatti, giocare con loro e nella gestione del rifugio.
+							- <a href="volontario.html" class="btn"><span style="color: red">Volontariato:</span></a>  Abbiamo sempre bisogno di mani amiche per aiutarci nella cura dei gatti, giocare con loro e nella gestione del rifugio.
 
                         </p>
         </div>
-        <div class="volontariato_right2">
-            <img src="img/kitten-6645241_1920.jpg" alt="Volontariato">
+        <div class="gattile_right2">
+            <img src="img/kitten-6645241_1920.jpg" alt="gattile">
         </div>
     </div>
     <!-- ======================================================================================= -->
@@ -693,6 +160,7 @@
 							<a href="index.html">Home</a>
 							<a href="index.html#ilrifugio">Rifugio</a>
                             <a href="index.html#services">Come Aiutare</a>
+                            <a href="donazioni.html">DONA ORA</a>
                             <a href="index.html#contatti">Contatti</a>
             </div>
             <div class="footer-right">
@@ -705,7 +173,7 @@
         <div class="footer-bottom">
             <div class="social-icons">
                 <a href="https://www.facebook.com/cascinaquadrifogliorifugio" class="icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
-                <a href="https://www.facebook.com/cascinaquadrifogliorifugio" class="icon instagram"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/enpa_pavia_cascinaquadrifoglio" class="icon instagram"><img src="img/instagram.png" alt="Instagram"></a>
                 <a href="https://www.youtube.com/watch?v=4bkQIQ1iQbk" class="icon youtube"><img src="img/Uiconstock-Flatin-Social-Youtube.256.png" alt="PayPal"></a>
             </div>
 						<p>Un rifugio di speranza, dove ogni coda scodinzola e ogni cuore trova casa. </p>
@@ -715,29 +183,8 @@
     <!-- ======================================================================================= -->
     <!-- ===                                  FINE FOOTER                                    === -->
     <!-- ======================================================================================= -->
-    <script>
-        function toggleMenu() {
-            document.querySelector('.hamburger').classList.toggle('active');
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-    </script>
-
-    <script>
-        // Mostra il pulsante quando si scorre verso il basso
-        window.addEventListener("scroll", function () {
-            var topButton = document.querySelector(".top-button");
-            if (window.scrollY > 100) {
-                topButton.classList.add("show");
-            } else {
-                topButton.classList.remove("show");
-            }
-        });
-
-        // Funzione per tornare in alto
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    </script>
+    <script src="js/menu.js"></script>
+    <script src="js/pulsante.js"></script>
 </body>
 </html>
 
