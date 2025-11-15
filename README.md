@@ -9,7 +9,7 @@ _Bozza di sito web per un animal shelter._
 - **Codice**: rilasciato sotto [MIT License](LICENSE-CODE.md).  
   → Il codice può essere copiato, modificato e riutilizzato liberamente.
 
-- **Contenuti (testi, immagini, loghi, ecc.)**: (LICENSE-CONTENT.md) **All Rights Reserved**.  
+- **Contenuti (testi, immagini, loghi, ecc.)**: [All Rights Reserved](LICENSE-CONTENT.md).  
   → I contenuti non possono essere copiati, modificati, distribuiti o riutilizzati in alcun modo.
 
 ---
