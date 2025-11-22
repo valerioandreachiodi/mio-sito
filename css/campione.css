@@ -393,6 +393,14 @@
                 .icon:hover img {
                     transform: translateY(-10px) scale(1.1);
                 }
+                /* Link licenza nel footer: sempre rosso */
+                footer .footer-bottom a.license-link,
+                footer .footer-bottom a.license-link:visited,
+                footer .footer-bottom a.license-link:hover,
+                footer .footer-bottom a.license-link:active {
+                    color: red !important;
+                    text-decoration: none;
+                }
                 /* ======================================================================================= */
                 /* ===                                  FINE FOOTER                                    === */
                 /* ======================================================================================= */
@@ -454,6 +462,7 @@
                     display: flex;
                     justify-content: center;
                 }
+
             /* ======================================================================================= */
             /* ===                                 FINE NAVBAR                                     === */
             /* ======================================================================================= */
