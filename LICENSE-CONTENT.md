@@ -1,6 +1,6 @@
 All Rights Reserved
 
-Copyright (c) 2025 [valerioandreachiodi]
+Copyright (c) 2025 [ENPA Pavia]
 
 Tutti i contenuti di questo repository (inclusi testi, immagini, loghi, materiali grafici e multimediali)  
 sono protetti da copyright.  
