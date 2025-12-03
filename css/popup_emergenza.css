@@ -1,0 +1,159 @@
+/* Overlay full screen */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.55); /* più scuro per effetto poster */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.overlay.show { display:flex; opacity:1; }
+
+/* Popup tipo poster */
+.popup {
+  background: #fff;
+  border-radius: 0; /* i poster di solito hanno angoli netti */
+  border: 6px solid #FF8400; /* cornice spessa e colorata */
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  width: 90vw;               /* occupa quasi tutto lo schermo */
+  max-width: 1000px;         /* limite su desktop */
+  padding: 3rem;
+  animation: pop-in 400ms ease-out both;
+  text-align: center;
+  font-family: "Impact", "Arial Black", sans-serif; /* font da manifesto */
+  background-image: linear-gradient(135deg, #fff 0%, #fdf2e9 100%); /* effetto carta */
+}
+@keyframes pop-in {
+  from {opacity:0; transform:translateY(20px) scale(0.95);}
+  to   {opacity:1; transform:translateY(0) scale(1);}
+}
+
+/* Header in stile poster */
+.popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 6px double #FF8400; /* linea doppia come nei manifesti */
+}
+.popup-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem); /* scala automaticamente */
+  color: #d60000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Pulsante chiusura più visibile */
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: #FF8400;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+/* Corpo del poster */
+.popup-body {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.8;
+}
+.popup-body h3 {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: #0084FF;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+.popup-body span {
+  font-weight: bold;
+  color: #FF8400;
+}
+
+/* Nuvoletta in basso a sinistra */
+.bubble {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 30%;
+  max-width: 400px;
+  background: #fff;
+  border: 3px solid #FF8400;   /* bordo arancione come il poster */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  padding: 12px 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  z-index: 9998;
+  display: none;
+  animation: fade-in 300ms ease-out both;
+  font-family: "Arial", sans-serif;
+}
+
+/* Titolo dentro la nuvoletta */
+.bubble strong {
+  color: #FF8400;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Animazione */
+@keyframes fade-in {
+  from {opacity:0; transform:translateY(10px);}
+  to   {opacity:1; transform:translateY(0);}
+}
+.bubble.show { display:block; }
+
+/* Pulsante chiusura */
+.bubble-close {
+  float:right;
+  border:none;
+  background:#FF8400;
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  margin-left:8px;
+  border-radius:50%;
+  width:1.5rem;
+  height:1.5rem;
+  line-height:1.5rem;
+  text-align:center;
+}
+
+/* Responsive: su mobile diventa un vero cartellone fullscreen */
+@media (max-width: 600px) {
+  .popup {
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+    padding: 2rem 1rem;
+    max-width: none;
+  }
+  .popup-header h2 {
+    font-size: 2rem;
+  }
+  .popup-body {
+    font-size: 1rem;
+  }
+  /* Nuvoletta in basso a sinistra */
+  .bubble {
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
