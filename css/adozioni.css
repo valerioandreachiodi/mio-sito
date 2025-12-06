@@ -57,6 +57,12 @@
     background-position: center;
     background-attachment: fixed;
 }
+/* Override per Safari iOS (iPhone/iPad) */
+@supports (-webkit-touch-callout: none) {
+    .canile_centrale {
+        background-attachment: scroll; /* disabilita il fixed su iOS */
+        background-position: center;
+    }
 
 @media screen and (max-width: 767px) {
     .adozioni_box, .adozioni_box2 {
