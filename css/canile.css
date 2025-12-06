@@ -55,7 +55,6 @@
     background-image: url("../img/dogs-1501962_1920.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 @media screen and (max-width: 767px) {

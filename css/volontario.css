@@ -55,7 +55,6 @@
     background-image: url("../img/jcr_content-3004447969.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 @media screen and (max-width: 767px) {

@@ -55,7 +55,6 @@
     background-image: url("../img/pexels-pixabay-45170.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 @media screen and (max-width: 767px) {
